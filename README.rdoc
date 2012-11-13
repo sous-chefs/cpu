@@ -2,7 +2,8 @@ modules-cookbook
 ================
 
 = DESCRIPTION:
-Chef cookbook to manage CPU Governor on linux with cpufreq
+
+Chef cookbook to manage CPU Governor on linux with cpufreq.
 
 = REQUIREMENTS:
 
@@ -14,3 +15,8 @@ tested on Ubuntu.
 node['cpu']['governor']
 
 = USAGE:
+
+in a recipe:
+
+   node.set["node"]["cpu"]["governor"] = "performance"
+   include_recipe "cpu"
