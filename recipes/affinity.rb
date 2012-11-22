@@ -17,3 +17,10 @@
 # limitations under the License.
 #
 
+case node['platform_family']
+when "debian"
+  package "util-linux"
+when "rhel"
+  package "schedutils"
+end
+  

@@ -17,3 +17,12 @@
 # limitations under the License.
 #
 
+package "cpufrequtils"
+
+for i in 0..(node["cpu"]["total"] - 1)
+  execute "set governator" do
+    command "cpufreq-set --cpu #{i} --governor #{node["cpu"]["governor"]}"
+    action :run
+    only_if "cpufreq-info --cpu #{i} --governors | grep #{node["cpu"]["governor"]}"
+  end
+end
