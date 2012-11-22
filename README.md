@@ -60,6 +60,35 @@ cpu-affinity "set affinity for nginx" do
 end
 ```
 
+`nice`
+----------
+
+Set the priority for a process.
+
+# Actions
+
+* `set` - Set priority
+
+# Attribute Parameters
+
+* `pid` : Pid or PidFile - name
+* `priority` : priority for process
+
+# Examples
+
+```
+cpu_nice 1234 do
+  priority 12
+end
+```
+
+```
+cpu_nice "set affinity for nginx" do
+  pid "/var/run/nginx.pid"
+  priority 19
+end
+```
+
 USAGE
 =====
 

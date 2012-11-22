@@ -1,9 +1,9 @@
 #
 # Cookbook Name:: cpu
-# Provider:: cpu_affinity
+# Provider:: cpu_nice
 # Author:: Guilhem Lettron <guilhem.lettron@youscribe.com>
 #
-# Copyright 20012, Societe Publica.
+# Copyright 2012, Societe Publica.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@
 #
 
 action :set do
-  execute "set affinity" do
-    command "taskset --cpu-list --pid #{new_resource.cpu} #{findpid(new_resource.pid)}"
+  execute "set nice" do
+    command "renice #{new_resource.priority} #{findpid(new_resource.pid)}"
   end
 end
