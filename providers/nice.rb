@@ -22,4 +22,5 @@ action :set do
   execute "set nice" do
     command "renice #{new_resource.priority} #{findpid(new_resource.pid)}"
   end
+  new_resource.updated_by_last_action(true)
 end
