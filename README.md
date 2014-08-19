@@ -1,50 +1,47 @@
-DESCRIPTION
-===========
+[![Cookbook Version](https://img.shields.io/cookbook/v/cpu.svg)](https://supermarket.getchef.com/cookbooks/cpu) [![Build Status](http://img.shields.io/travis/Youscribe/cpu-cookbook/master.svg)](https://travis-ci.org/Youscribe/cpu-cookbook)
 
-Chef cookbook to manage CPU related actions on linux.
+# Description
 
-REQUIREMENTS
-============
+Manage CPU Governor on linux
 
-Linux 2.6+
-tested on Ubuntu.
+# Requirements
 
-Attributes
-==========
+## Platform:
 
-* `node['cpu']['governor']` - governator for to set for the node
+* Ubuntu
+* Debian
 
-Recipes
-=======
+## Cookbooks:
 
-governor
-----------
+*No dependencies defined*
 
-Set the governator for the node from attributes
+# Attributes
 
-affinity
---------
+* `node['cpu']['governor']` -  Defaults to `"ondemand"`.
 
-Install software to set cpu affinity of a process.
+# Recipes
 
-Resources and Providers
-=======================
+* cpu::affinity
+* cpu::default
+* cpu::governor
 
-`affinity`
-----------
+# Resources
 
-Set the affinity for a process.
+* [cpu_affinity](#cpu_affinity)
+* [cpu_nice](#cpu_nice)
 
-# Actions
+## cpu_affinity
 
-* `set` - Set affinity
+### Actions
 
-# Attribute Parameters
+- set:  Default action.
 
-* `cpu` : Cpu(s) affinity - required
-* `pid` : Pid or PidFile - name
+### Attribute Parameters
 
-# Examples
+- pid:
+- cpu:
+
+### Examples
 
 ```
 cpu_affinity 1234 do
@@ -52,29 +49,26 @@ cpu_affinity 1234 do
 end
 ```
 
+Set affinity to processor 0,1,2 for process nginx
 ```
-# Set affinity to processor 0,1,2 for process nginx
-cpu-affinity "set affinity for nginx" do
-  pid "/var/run/nginx.pid"
-  cpu "0-2"
+cpu-affinity 'set affinity for nginx' do
+  pid '/var/run/nginx.pid'
+  cpu '0-2'
 end
 ```
 
-`nice`
-----------
+## cpu_nice
 
-Set the priority for a process.
+### Actions
 
-# Actions
+- set:  Default action.
 
-* `set` - Set priority
+### Attribute Parameters
 
-# Attribute Parameters
+- pid:
+- priority:
 
-* `pid` : Pid or PidFile - name
-* `priority` : priority for process
-
-# Examples
+### Examples
 
 ```
 cpu_nice 1234 do
@@ -83,16 +77,14 @@ end
 ```
 
 ```
-cpu_nice "set affinity for nginx" do
-  pid "/var/run/nginx.pid"
+cpu_nice 'set affinity for nginx' do
+  pid '/var/run/nginx.pid'
   priority 19
 end
 ```
 
-USAGE
-=====
+# License and Maintainer
 
-in a recipe:
+Maintainer:: Guilhem Lettron (<guilhem.lettron@youscribe.com>)
 
-   node.set["node"]["cpu"]["governor"] = "performance"
-   include_recipe "cpu::governor"
+License:: Apache v2.0
