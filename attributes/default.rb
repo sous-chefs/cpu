@@ -1,1 +1,1 @@
-default["cpu"]["governor"] = "ondemand"
+default['cpu']['governor'] = 'ondemand'

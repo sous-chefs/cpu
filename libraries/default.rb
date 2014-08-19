@@ -10,9 +10,9 @@ def findpid(pidOrFile)
   end
   # Test if pid exist
   begin
-    Process.getpgid( pid )
+    Process.getpgid(pid)
   rescue Errno::ESRCH
     Chef::Log.error("Pid #{pid} not found")
   end
-  return pid
+  pid
 end
