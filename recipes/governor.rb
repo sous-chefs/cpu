@@ -20,7 +20,7 @@
 package 'cpufrequtils'
 
 (0..(node['cpu']['total'] - 1)).each do |i|
-  execute 'set governator' do
+  execute "set governator for CPU #{i}" do
     command "cpufreq-set --cpu #{i} --governor #{node['cpu']['governor']}"
     action :run
     only_if "cpufreq-info --cpu #{i} --governors | grep #{node['cpu']['governor']}"
