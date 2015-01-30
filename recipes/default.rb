@@ -1,8 +1,10 @@
 #
 # Cookbook Name:: cpu
+# Author:: Jonathan Bogaty <jon@jonbogaty.com>
 # Author:: Guilhem Lettron <guilhem.lettron@youscribe.com>
 #
-# Copyright 2012, Societe Publica.
+# Copyright 2015, Jonathan Bogaty
+# Copyright 2015, Societe Publica.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,3 +18,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+allowed_utils = [
+  'affinity',
+  'governor'
+]
+node['cpu']['enable'].each do |util|
+  if allowed_utils.include?(util)
+    package node['cpu']['utilities'][util] do
+      action node['cpu']['install_method']
+    end
+
+    include_recipe "cpu::#{util}"
+  end
+end

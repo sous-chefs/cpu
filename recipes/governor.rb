@@ -1,7 +1,9 @@
 #
 # Cookbook Name:: cpu
+# Author:: Jonathan Bogaty <jon@jonbogaty.com>
 # Author:: Guilhem Lettron <guilhem.lettron@youscribe.com>
 #
+# Copyright 2015, Jonathan Bogaty
 # Copyright 2012, Societe Publica.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,10 +19,8 @@
 # limitations under the License.
 #
 
-package 'cpufrequtils'
-
 (0..(node['cpu']['total'] - 1)).each do |i|
-  execute "set governator for CPU #{i}" do
+  execute "set governor for CPU #{i}" do
     command "cpufreq-set --cpu #{i} --governor #{node['cpu']['governor']}"
     action :run
     only_if "cpufreq-info --cpu #{i} --governors | grep #{node['cpu']['governor']}"

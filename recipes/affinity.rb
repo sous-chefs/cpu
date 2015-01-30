@@ -1,7 +1,9 @@
 #
 # Cookbook Name:: cpu
+# Author:: Jonathan Bogaty <jon@jonbogaty.com>
 # Author:: Guilhem Lettron <guilhem.lettron@youscribe.com>
 #
+# Copyright 2015 Jonathan Bogaty
 # Copyright 2012, Societe Publica.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,9 +19,3 @@
 # limitations under the License.
 #
 
-case node['platform_family']
-when 'debian'
-  package 'util-linux'
-when 'rhel'
-  package 'schedutils'
-end

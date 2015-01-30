@@ -1,28 +1,37 @@
-[![Cookbook Version](https://img.shields.io/cookbook/v/cpu.svg)](https://supermarket.getchef.com/cookbooks/cpu) [![Build Status](http://img.shields.io/travis/Youscribe/cpu-cookbook/master.svg)](https://travis-ci.org/Youscribe/cpu-cookbook)
+CPU Cookbook
+============
+This cookbook is used to configure a system's CPU affinity and governor.
 
 # Description
 
 Manage CPU Governor on linux
 
-# Requirements
+Requirements
+------------
+* Should work on Chef 10 and above on supported Linux distributions
 
 ## Platform:
 
 * Ubuntu
 * Debian
+* SUSE
+* RHEL
+* CentOS
 
 ## Cookbooks:
 
 *No dependencies defined*
 
 # Attributes
-
-* `node['cpu']['governor']` -  Defaults to `"ondemand"`.
+* governor - Defaults to 'ondemand'
+* utilities['affinity', 'governor'] - Platform-specific packages for controlling processor affinity and governor
+* enable - Array of utilities to enable, defaults to ['governor']
+* install_method - Package installation method, defaults to 'install'
 
 # Recipes
 
+* cpu::default - In most cases calling this directly will be sufficient. The enable array will determine which additional recipes from the below list are included.
 * cpu::affinity
-* cpu::default
 * cpu::governor
 
 # Resources
@@ -85,6 +94,6 @@ end
 
 # License and Maintainer
 
-Maintainer:: Guilhem Lettron (<guilhem.lettron@youscribe.com>)
+Maintainer:: Jonathan Bogaty (<jon@jonbogaty.com>)
 
 License:: Apache v2.0
