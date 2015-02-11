@@ -23,12 +23,12 @@ allowed_utils = [
   'affinity',
   'governor'
 ]
-node['cpu']['enable'].each do |util|
-  if allowed_utils.include?(util)
-    package node['cpu']['utilities'][util] do
-      action node['cpu']['install_method']
-    end
 
-    include_recipe "cpu::#{util}"
+node['cpu']['enable'].each do |util|
+  next unless allowed_utils.include?(util)
+  package node['cpu']['utilities'][util] do
+    action node['cpu']['install_method']
   end
+
+  include_recipe "cpu::#{util}"
 end

@@ -1,3 +1,5 @@
+[![Cookbook Version](https://img.shields.io/cookbook/v/cpu.svg)](https://supermarket.getchef.com/cookbooks/cpu) [![Build Status](http://img.shields.io/travis/Youscribe/cpu-cookbook/master.svg)](https://travis-ci.org/Youscribe/cpu-cookbook)
+
 CPU Cookbook
 ============
 This cookbook is used to configure a system's CPU affinity and governor.

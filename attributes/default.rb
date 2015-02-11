@@ -1,7 +1,7 @@
 default['cpu']['governor'] = 'ondemand'
 
 case node['platform_family']
-  when 'debian', 'suse'
+when 'debian', 'suse'
   default['cpu']['utilities']['affinity'] = 'util-linux'
 when 'rhel'
   default['cpu']['utilities']['affinity'] = 'schedutils'
