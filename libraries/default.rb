@@ -1,12 +1,12 @@
-def findpid(pidOrFile)
-  if ::File.file?(pidOrFile)
-    if ::File.readable?(pidOrFile)
-      pid = ::File.read(pidOrFile).to_i
+def findpid(pid_or_file)
+  if ::File.file?(pid_or_file)
+    if ::File.readable?(pid_or_file)
+      pid = ::File.read(pid_or_file).to_i
     else
-      Chef::Log.error("File #{pidOrFile} isn't readable")
+      Chef::Log.error("File #{pid_or_file} isn't readable")
     end
   else
-    pid = pidOrFile.to_i
+    pid = pid_or_file.to_i
   end
   # Test if pid exist
   begin

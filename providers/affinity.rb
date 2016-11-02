@@ -18,9 +18,10 @@
 # limitations under the License.
 #
 
+use_inline_resources
+
 action :set do
   execute 'set affinity' do
     command "taskset --cpu-list --pid #{new_resource.cpu} #{findpid(new_resource.pid)}"
   end
-  new_resource.updated_by_last_action(true)
 end
