@@ -1,4 +1,4 @@
-[![Cookbook Version](https://img.shields.io/cookbook/v/cpu.svg)](https://supermarket.getchef.com/cookbooks/cpu) [![Build Status](http://img.shields.io/travis/Youscribe/cpu-cookbook/master.svg)](https://travis-ci.org/Youscribe/cpu-cookbook)
+[![Cookbook Version](https://img.shields.io/cookbook/v/cpu.svg)](https://supermarket.getchef.com/cookbooks/cpu) [![Build Status](http://img.shields.io/travis/redguide/cpu/master.svg)](https://travis-ci.org/redguide/cpu)
 
 # Description
 
