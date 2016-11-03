@@ -51,7 +51,7 @@ end
 
 Set affinity to processor 0,1,2 for process nginx
 ```
-cpu-affinity 'set affinity for nginx' do
+cpu_affinity 'set affinity for nginx' do
   pid '/var/run/nginx.pid'
   cpu '0-2'
 end
