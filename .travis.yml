@@ -1,5 +1,3 @@
-# Use Travis's cointainer based infrastructure
-sudo: false
 addons:
   apt:
     sources:
@@ -9,10 +7,6 @@ addons:
 
 # Don't `bundle install`
 install: echo "skip bundle install"
-
-branches:
-  only:
-    - master
 
 # Ensure we make ChefDK's Ruby the default
 before_script:
@@ -26,7 +20,7 @@ script:
   - /opt/chefdk/embedded/bin/foodcritic --version
   - /opt/chefdk/bin/chef exec rake
 
-before_install:
+before_deploy:
   - openssl aes-256-cbc -K $encrypted_863b80624658_key -iv $encrypted_863b80624658_iv -in supermarket.pem.enc -out supermarket.pem -d
 
 deploy:
