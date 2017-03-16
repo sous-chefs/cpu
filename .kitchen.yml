@@ -17,3 +17,9 @@ suites:
 - name: default
   run_list:
   - recipe[cpu]
+- name: affinity
+  run_list:
+  - recipe[cpu::affinity]
+- name: governor
+  run_list:
+  - recipe[cpu::governor]
