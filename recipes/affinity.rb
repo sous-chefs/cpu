@@ -17,9 +17,7 @@
 # limitations under the License.
 #
 
-case node['platform_family']
-when 'debian'
-  package 'util-linux'
-when 'rhel'
-  package 'schedutils'
-end
+package value_for_platform_family(rhel: {
+                                    '6' => 'schedutils',
+                                  },
+                                  default: 'util-linux')
