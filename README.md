@@ -1,90 +1,95 @@
+# cpu Cookbook
 [![Cookbook Version](https://img.shields.io/cookbook/v/cpu.svg)](https://supermarket.getchef.com/cookbooks/cpu) [![Build Status](http://img.shields.io/travis/redguide/cpu/master.svg)](https://travis-ci.org/redguide/cpu)
-
-# Description
 
 Manage CPU Governor on linux
 
-# Requirements
+## Requirements
 
-## Platform:
+### Platforms
 
-* Ubuntu
-* Debian
+- Ubuntu
+- Debian
 
-## Cookbooks:
+### Chef
 
-*No dependencies defined*
+- Chef 12.5+
 
-# Attributes
+### Cookbooks
 
-* `node['cpu']['governor']` -  Defaults to `"ondemand"`.
+_No dependencies defined_
 
-# Recipes
 
-* cpu::affinity
-* cpu::default
-* cpu::governor
+## Attributes
 
-# Resources
+- `node['cpu']['governor']` - Defaults to `"ondemand"`.
 
-* [cpu_affinity](#cpu_affinity)
-* [cpu_nice](#cpu_nice)
+## Recipes
 
-## cpu_affinity
+- `cpu::affinity` - deprecated
+- `cpu::default` - deprecated
+- `cpu::governor` - Sets the CPU governer based on the attribute above
 
-### Actions
+## Resources
 
-- set:  Default action.
+- [cpu_affinity](#cpu_affinity)
+- [cpu_nice](#cpu_nice)
 
-### Attribute Parameters
+### cpu_affinity
+
+#### Actions
+
+- set: Default action.
+
+#### Properties
 
 - pid:
 - cpu:
 
-### Examples
+#### Examples
 
-```
+```ruby
 cpu_affinity 1234 do
   cpu 0
 end
 ```
 
 Set affinity to processor 0,1,2 for process nginx
-```
+
+```ruby
 cpu_affinity 'set affinity for nginx' do
   pid '/var/run/nginx.pid'
   cpu '0-2'
 end
 ```
 
-## cpu_nice
+### cpu_nice
 
-### Actions
+#### Actions
 
-- set:  Default action.
+- set: Default action.
 
-### Attribute Parameters
+#### Properties
 
 - pid:
 - priority:
 
-### Examples
+#### Examples
 
-```
+```ruby
 cpu_nice 1234 do
   priority 12
 end
 ```
 
-```
+```ruby
 cpu_nice 'set affinity for nginx' do
   pid '/var/run/nginx.pid'
   priority 19
 end
 ```
 
-# License and Maintainer
+## License and Maintainer
 
-Maintainer:: Guilhem Lettron (<guilhem.lettron@youscribe.com>)
+Maintainer:: Guilhem Lettron ([guilhem.lettron@youscribe.com](mailto:guilhem.lettron@youscribe.com))
 
 License:: Apache v2.0
