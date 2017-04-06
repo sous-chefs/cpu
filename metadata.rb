@@ -13,6 +13,6 @@ supports 'scientific'
 supports 'oracle'
 supports 'amazon'
 
-source_url 'https://github.com/redguide/cpu' if respond_to?(:source_url)
-issues_url 'https://github.com/redguide/cpu/issues' if respond_to?(:issues_url)
-chef_version '>= 11.0' if respond_to?(:chef_version)
+source_url 'https://github.com/redguide/cpu'
+issues_url 'https://github.com/redguide/cpu/issues'
+chef_version '>= 12.5' if respond_to?(:chef_version)
