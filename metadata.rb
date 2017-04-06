@@ -7,6 +7,11 @@ long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version '1.0.0'
 supports 'ubuntu'
 supports 'debian'
+supports 'redhat'
+supports 'fedora'
+supports 'scientific'
+supports 'oracle'
+supports 'amazon'
 
 source_url 'https://github.com/redguide/cpu' if respond_to?(:source_url)
 issues_url 'https://github.com/redguide/cpu/issues' if respond_to?(:issues_url)
