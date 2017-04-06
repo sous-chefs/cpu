@@ -17,7 +17,4 @@
 # limitations under the License.
 #
 
-package value_for_platform_family(rhel: {
-                                    '6' => 'schedutils',
-                                  },
-                                  default: 'util-linux')
+package 'util-linux'
