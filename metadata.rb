@@ -1,7 +1,7 @@
 name 'cpu'
 maintainer 'Guilhem Lettron'
 maintainer_email 'guilhem@lettron.fr'
-license 'Apache v2.0'
+license 'Apache-2.0'
 description 'Manage CPU Governor on linux'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version '1.0.0'
