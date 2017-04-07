@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: cpu
+# Cookbook:: cpu
 # Author:: Guilhem Lettron <guilhem.lettron@youscribe.com>
 #
-# Copyright 2012, Societe Publica.
+# Copyright:: 2012-2017, Societe Publica.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,12 +17,17 @@
 # limitations under the License.
 #
 
-package 'cpufrequtils'
+# we don't currently support newer platforms that use the cpu power tool
+if (platform_family?('rhel') && node['platform_version'].to_i == 7) || platform?('fedora')
+  Chef::Log.warn('This cookbook currently does not support RHEL 7 or Fedora. Skipping cpu::governor')
+else
+  package 'cpufrequtils'
 
-(0..(node['cpu']['total'] - 1)).each do |i|
-  execute "set governator for CPU #{i}" do
-    command "cpufreq-set --cpu #{i} --governor #{node['cpu']['governor']}"
-    action :run
-    only_if "cpufreq-info --cpu #{i} --governors | grep #{node['cpu']['governor']}"
+  (0..(node['cpu']['total'] - 1)).each do |i|
+    execute "set governor for CPU #{i}" do
+      command "cpufreq-set --cpu #{i} --governor #{node['cpu']['governor']}"
+      action :run
+      only_if "cpufreq-info --cpu #{i} --governors | grep #{node['cpu']['governor']}"
+    end
   end
 end

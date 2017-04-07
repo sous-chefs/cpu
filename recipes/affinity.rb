@@ -1,8 +1,8 @@
 #
-# Cookbook Name:: cpu
+# Cookbook:: cpu
 # Author:: Guilhem Lettron <guilhem.lettron@youscribe.com>
 #
-# Copyright 2012, Societe Publica.
+# Copyright:: 2012-2017, Societe Publica.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,4 +17,4 @@
 # limitations under the License.
 #
 
-package 'util-linux'
+Chef::Log.warn('The cpu::affinity recipe has been deprecated. The cpu_affinity resource will no install the necessary packages itself')

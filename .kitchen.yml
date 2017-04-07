@@ -3,22 +3,18 @@ driver:
 
 provisioner:
   name: chef_zero
+  deprecations_as_errors: true
 
 platforms:
   - name: centos-6.8
   - name: centos-7.3
   - name: debian-7.11
   - name: debian-8.7
+  - name: fedora-25
   - name: ubuntu-14.04
   - name: ubuntu-16.04
 
 suites:
 - name: default
   run_list:
-  - recipe[cpu]
-- name: affinity
-  run_list:
-  - recipe[cpu::affinity]
-- name: governor
-  run_list:
-  - recipe[cpu::governor]
+  - recipe[test::default]
