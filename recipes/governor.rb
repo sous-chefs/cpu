@@ -18,7 +18,9 @@
 #
 
 # we don't currently support newer platforms that use the cpu power tool
-unless (platform_family?('rhel') && node['platform_version'].to_i == 7) || platform?('fedora')
+if (platform_family?('rhel') && node['platform_version'].to_i == 7) || platform?('fedora')
+  Chef::Log.warn('This cookbook currently does not support RHEL 7 or Fedora. Skipping cpu::governor')
+else
   package 'cpufrequtils'
 
   (0..(node['cpu']['total'] - 1)).each do |i|
