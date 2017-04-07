@@ -17,16 +17,15 @@
 # limitations under the License.
 #
 
-if platform_family?('rhel', 'fedora') && !platform?('amazon') && node['platform_version'].to_i >= 7
-  package 'cpupowerutils'
-else
+# we don't currently support newer platforms that use the cpu power tool
+unless (platform_family?('rhel') && node['platform_version'].to_i == 7) || platform?('fedora')
   package 'cpufrequtils'
-end
 
-(0..(node['cpu']['total'] - 1)).each do |i|
-  execute "set governator for CPU #{i}" do
-    command "cpufreq-set --cpu #{i} --governor #{node['cpu']['governor']}"
-    action :run
-    only_if "cpufreq-info --cpu #{i} --governors | grep #{node['cpu']['governor']}"
+  (0..(node['cpu']['total'] - 1)).each do |i|
+    execute "set governor for CPU #{i}" do
+      command "cpufreq-set --cpu #{i} --governor #{node['cpu']['governor']}"
+      action :run
+      only_if "cpufreq-info --cpu #{i} --governors | grep #{node['cpu']['governor']}"
+    end
   end
 end

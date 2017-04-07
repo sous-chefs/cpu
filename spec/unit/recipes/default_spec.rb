@@ -39,8 +39,8 @@ describe 'package installation' do
       ChefSpec::SoloRunner.new(platform: 'centos', version: '7.2.1511').converge('test::default')
     end
 
-    it 'installs cpupowerutils' do
-      expect(chef_run).to install_package('cpupowerutils')
+    it 'does not install cpufrequtils' do
+      expect(chef_run).not_to install_package('cpufrequtils')
     end
   end
 
@@ -49,8 +49,8 @@ describe 'package installation' do
       ChefSpec::SoloRunner.new(platform: 'fedora', version: '25').converge('test::default')
     end
 
-    it 'installs cpupowerutils' do
-      expect(chef_run).to install_package('cpupowerutils')
+    it 'does not install cpufrequtils' do
+      expect(chef_run).not_to install_package('cpufrequtils')
     end
   end
 
