@@ -17,4 +17,4 @@
 # limitations under the License.
 #
 
-Chef::Log.warn('The cpu::affinity recipe has been deprecated. The cpu_afinity resource will no install the necessary packages itself')
+Chef::Log.warn('The cpu::affinity recipe has been deprecated. The cpu_affinity resource will no install the necessary packages itself')
