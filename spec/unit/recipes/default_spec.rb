@@ -26,7 +26,7 @@ describe 'package installation' do
 
   describe 'test::default on CentOS 6' do
     let(:chef_run) do
-      ChefSpec::SoloRunner.new(platform: 'centos', version: '6.8').converge('test::default')
+      ChefSpec::SoloRunner.new(platform: 'centos', version: '6').converge('test::default')
     end
 
     it 'installs cpufrequtils' do
@@ -36,7 +36,7 @@ describe 'package installation' do
 
   describe 'test::default on CentOS 7' do
     let(:chef_run) do
-      ChefSpec::SoloRunner.new(platform: 'centos', version: '7.2.1511').converge('test::default')
+      ChefSpec::SoloRunner.new(platform: 'centos', version: '7').converge('test::default')
     end
 
     it 'does not install cpufrequtils' do
@@ -46,7 +46,7 @@ describe 'package installation' do
 
   describe 'test::default on Fedora' do
     let(:chef_run) do
-      ChefSpec::SoloRunner.new(platform: 'fedora', version: '25').converge('test::default')
+      ChefSpec::SoloRunner.new(platform: 'fedora', version: '31').converge('test::default')
     end
 
     it 'does not install cpufrequtils' do
