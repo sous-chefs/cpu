@@ -2,6 +2,14 @@
 
 This file is used to list changes made in each version of the cpu cookbook.
 
+## Unreleased
+
+- resolved cookstyle error: metadata.rb:6:1 refactor: `ChefRedundantCode/LongDescriptionMetadata`
+- resolved cookstyle error: metadata.rb:18:1 refactor: `ChefModernize/RespondToInMetadata`
+- resolved cookstyle error: spec/unit/recipes/default_spec.rb:29:7 warning: `ChefDeprecations/DeprecatedChefSpecPlatform`
+- resolved cookstyle error: spec/unit/recipes/default_spec.rb:39:7 warning: `ChefDeprecations/DeprecatedChefSpecPlatform`
+- resolved cookstyle error: spec/unit/recipes/default_spec.rb:49:7 warning: `ChefDeprecations/DeprecatedChefSpecPlatform`
+
 ## v2.0.0 (2017-04-07)
 
 - This cookbook now requires Chef 12.5 or later
