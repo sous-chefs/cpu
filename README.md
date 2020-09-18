@@ -1,6 +1,6 @@
 # cpu Cookbook
 
-[![Cookbook Version](https://img.shields.io/cookbook/v/sc_cpu.svg)](https://supermarket.chef.io/cookbooks/sc_cpu)
+[![Cookbook Version](https://img.shields.io/cookbook/v/cpu.svg)](https://supermarket.chef.io/cookbooks/cpu)
 [![Build Status](https://img.shields.io/circleci/project/github/sous-chefs/cpu/master.svg)](https://circleci.com/gh/sous-chefs/cpu)
 [![OpenCollective](https://opencollective.com/sous-chefs/backers/badge.svg)](#backers)
 [![OpenCollective](https://opencollective.com/sous-chefs/sponsors/badge.svg)](#sponsors)
