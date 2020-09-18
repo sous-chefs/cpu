@@ -1,3 +1,4 @@
+---
 driver:
   name: vagrant
 
@@ -14,6 +15,6 @@ platforms:
   - name: ubuntu-20.04
 
 suites:
-- name: default
-  run_list:
-  - recipe[test::default]
+  - name: default
+    run_list:
+      - recipe[test::default]

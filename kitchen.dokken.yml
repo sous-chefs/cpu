@@ -1,6 +1,7 @@
+---
 driver:
   name: dokken
-  privileged: true # because Docker and SystemD/Upstart
+  privileged: true
   chef_version: current
 
 transport:
@@ -71,4 +72,4 @@ platforms:
 suites:
   - name: default
     run_list:
-    - recipe[test::default]
+      - recipe[test::default]
