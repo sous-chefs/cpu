@@ -22,7 +22,7 @@ Manage CPU Governor on linux
 
 ### Cookbooks
 
-No dependencies defined_
+No dependencies defined
 
 ## Attributes
 
