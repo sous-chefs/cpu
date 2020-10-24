@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the cpu cookbook.
 
-## Unreleased
+## v2.1.0 (2020-10-24)
 
 - resolved cookstyle error: metadata.rb:6:1 refactor: `ChefRedundantCode/LongDescriptionMetadata`
 - resolved cookstyle error: metadata.rb:18:1 refactor: `ChefModernize/RespondToInMetadata`

@@ -6,7 +6,7 @@ description       'Manage CPU Governor on linux'
 source_url        'https://github.com/sous-chefs/cpu'
 issues_url        'https://github.com/sous-chefs/cpu/issues'
 chef_version      '>= 12.5'
-version           '2.0.0'
+version           '2.1.0'
 
 supports 'ubuntu'
 supports 'debian'
