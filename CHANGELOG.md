@@ -9,6 +9,7 @@ This file is used to list changes made in each version of the cpu cookbook.
 - resolved cookstyle error: spec/unit/recipes/default_spec.rb:29:7 warning: `ChefDeprecations/DeprecatedChefSpecPlatform`
 - resolved cookstyle error: spec/unit/recipes/default_spec.rb:39:7 warning: `ChefDeprecations/DeprecatedChefSpecPlatform`
 - resolved cookstyle error: spec/unit/recipes/default_spec.rb:49:7 warning: `ChefDeprecations/DeprecatedChefSpecPlatform`
+- Adoption by Sous-Chefs
 
 ## v2.0.0 (2017-04-07)
 
