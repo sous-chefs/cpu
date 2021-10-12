@@ -4,6 +4,8 @@ This file is used to list changes made in each version of the cpu cookbook.
 
 ## Unreleased
 
+- resolved cookstyle error: resources/affinity.rb:32:1 refactor: `Chef/Modernize/ClassEvalActionClass`
+- resolved cookstyle error: resources/nice.rb:30:1 refactor: `Chef/Modernize/ClassEvalActionClass`
 ## 2.1.2 - *2021-08-31*
 
 - Standardise files with files in sous-chefs/repo-management
