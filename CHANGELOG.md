@@ -4,6 +4,7 @@ This file is used to list changes made in each version of the cpu cookbook.
 
 ## Unreleased
 
+- resolved cookstyle error: spec/unit/recipes/default_spec.rb:49:7 warning: `Chef/Deprecations/DeprecatedChefSpecPlatform`
 - resolved cookstyle error: resources/affinity.rb:32:1 refactor: `Chef/Modernize/ClassEvalActionClass`
 - resolved cookstyle error: resources/nice.rb:30:1 refactor: `Chef/Modernize/ClassEvalActionClass`
 ## 2.1.2 - *2021-08-31*
