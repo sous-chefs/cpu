@@ -4,6 +4,13 @@ This file is used to list changes made in each version of the cpu cookbook.
 
 ## Unreleased
 
+- resolved cookstyle error: .delivery/project.toml:2:8 convention: `Style/StringLiterals`
+- resolved cookstyle error: .delivery/project.toml:4:10 convention: `Style/StringLiterals`
+- resolved cookstyle error: .delivery/project.toml:5:13 convention: `Style/StringLiterals`
+- resolved cookstyle error: .delivery/project.toml:6:10 convention: `Style/StringLiterals`
+- resolved cookstyle error: .delivery/project.toml:7:9 convention: `Style/StringLiterals`
+- resolved cookstyle error: .delivery/project.toml:8:14 convention: `Style/StringLiterals`
+- resolved cookstyle error: .delivery/project.toml:9:11 convention: `Style/StringLiterals`
 - resolved cookstyle error: spec/unit/recipes/default_spec.rb:49:7 warning: `Chef/Deprecations/DeprecatedChefSpecPlatform`
 - resolved cookstyle error: resources/affinity.rb:32:1 refactor: `Chef/Modernize/ClassEvalActionClass`
 - resolved cookstyle error: resources/nice.rb:30:1 refactor: `Chef/Modernize/ClassEvalActionClass`
