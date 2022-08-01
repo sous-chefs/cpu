@@ -18,7 +18,7 @@ Manage CPU Governor on linux
 
 ### Chef
 
-- Chef 12.5+
+- Chef 15.3+
 
 ### Cookbooks
 

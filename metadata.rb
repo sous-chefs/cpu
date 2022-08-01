@@ -5,7 +5,7 @@ license           'Apache-2.0'
 description       'Manage CPU Governor on linux'
 source_url        'https://github.com/sous-chefs/cpu'
 issues_url        'https://github.com/sous-chefs/cpu/issues'
-chef_version      '>= 12.5'
+chef_version      '>= 15.3'
 version           '2.1.2'
 
 supports 'ubuntu'

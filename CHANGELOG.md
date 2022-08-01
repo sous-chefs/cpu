@@ -7,6 +7,8 @@ This file is used to list changes made in each version of the cpu cookbook.
 - Remove delivery folder
 - resolved cookstyle error: resources/affinity.rb:32:1 refactor: `Chef/Modernize/ClassEvalActionClass`
 - resolved cookstyle error: resources/nice.rb:30:1 refactor: `Chef/Modernize/ClassEvalActionClass`
+- Chef 17 updates: enable `unified_mode` on all resources
+- Bump required Chef Infra Client to >= 15.3
 
 ## 2.1.2 - *2021-08-31*
 
