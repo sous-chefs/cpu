@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the cpu cookbook.
 
-## Unreleased
+## 3.0.0 - *2022-08-04*
 
 - Remove delivery folder
 - resolved cookstyle error: resources/affinity.rb:32:1 refactor: `Chef/Modernize/ClassEvalActionClass`
