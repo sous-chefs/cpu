@@ -21,6 +21,8 @@
 property :pid, [String, Integer], name_property: true
 property :cpu, [String, Integer], required: true
 
+unified_mode true
+
 action :set do
   package 'util-linux'
 

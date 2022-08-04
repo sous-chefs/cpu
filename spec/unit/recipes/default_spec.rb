@@ -46,7 +46,7 @@ describe 'package installation' do
 
   describe 'test::default on Fedora' do
     let(:chef_run) do
-      ChefSpec::SoloRunner.new(platform: 'fedora', version: '31').converge('test::default')
+      ChefSpec::SoloRunner.new(platform: 'fedora').converge('test::default')
     end
 
     it 'does not install cpufrequtils' do
@@ -56,7 +56,7 @@ describe 'package installation' do
 
   describe 'test::default on Amazon Linux' do
     let(:chef_run) do
-      ChefSpec::SoloRunner.new(platform: 'amazon', version: '2016.09').converge('test::default')
+      ChefSpec::SoloRunner.new(platform: 'amazon').converge('test::default')
     end
 
     it 'installs cpufrequtils' do

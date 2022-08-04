@@ -8,7 +8,7 @@ apt_update 'update'
 include_recipe 'cpu::governor'
 
 # we need something that will be running on every system
-chef_pid = shell_out('pidof chef-client').run_command.stdout
+chef_pid = Process.pid
 
 cpu_affinity chef_pid do
   cpu 0

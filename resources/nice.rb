@@ -21,6 +21,8 @@
 property :pid, [String, Integer], name_property: true
 property :priority, Integer, required: true
 
+unified_mode true
+
 action :set do
   execute 'set nice' do
     command "renice #{new_resource.priority} #{findpid(new_resource.pid)}"
