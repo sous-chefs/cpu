@@ -2,6 +2,8 @@
 
 This file is used to list changes made in each version of the cpu cookbook.
 
+## Unreleased
+
 ## 3.0.9 - *2023-10-31*
 
 ## 3.0.8 - *2023-09-28*
