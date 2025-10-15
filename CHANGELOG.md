@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of the cpu cookbook.
 
+## [3.0.14](https://github.com/sous-chefs/cpu/compare/3.0.13...v3.0.14) (2025-10-15)
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#55](https://github.com/sous-chefs/cpu/issues/55)) ([ce03b52](https://github.com/sous-chefs/cpu/commit/ce03b52dfbf71ece57157705475aea83baedb8c7))
+
 ## 3.0.13 - 3.0.1
 
 * Standardise files with files in sous-chefs/repo-management
