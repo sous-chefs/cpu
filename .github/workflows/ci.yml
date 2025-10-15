@@ -9,32 +9,17 @@ name: ci
 
 jobs:
   lint-unit:
-    uses: sous-chefs/.github/.github/workflows/lint-unit.yml@4.0.0
+    uses: sous-chefs/.github/.github/workflows/lint-unit.yml@5.0.3
     permissions:
       actions: write
       checks: write
       pull-requests: write
       statuses: write
       issues: write
-
-  yamllint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v5
-      - name: Run yaml Lint
-        uses: actionshub/yamllint@main
-
-  mdl:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v5
-      - name: Run Markdown Lint
-        uses: actionshub/markdownlint@main
+    secrets: inherit
 
   integration:
-    needs: [mdl, yamllint, lint-unit]
+    needs: lint-unit
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -53,9 +38,9 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v5
       - name: Install Chef
-        uses: actionshub/chef-install@3.0.1
+        uses: actionshub/chef-install@main
       - name: Dokken
-        uses: actionshub/test-kitchen@3.0.0
+        uses: actionshub/test-kitchen@main
         env:
           CHEF_LICENSE: accept-no-persist
           KITCHEN_LOCAL_YAML: kitchen.dokken.yml
