@@ -4,16 +4,16 @@ Manage CPU affinity for a running process.
 
 ## Actions
 
-| Action | Description |
-|---|---|
+| Action | Description                                            |
+|--------|--------------------------------------------------------|
 | `:set` | Set the CPU affinity for the target process (default). |
 
 ## Properties
 
-| Property | Type | Default | Description |
-|---|---|---|---|
-| `pid` | String, Integer | name property | PID or PID file to target. |
-| `cpu` | String, Integer | none | CPU or CPU range to assign. |
+| Property | Type            | Default       | Description                 |
+|----------|-----------------|---------------|-----------------------------|
+| `pid`    | String, Integer | name property | PID or PID file to target.  |
+| `cpu`    | String, Integer | none          | CPU or CPU range to assign. |
 
 ## Examples
 

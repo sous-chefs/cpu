@@ -4,17 +4,17 @@ Manage the Linux CPU frequency governor for one or more CPUs.
 
 ## Actions
 
-| Action | Description |
-|---|---|
+| Action | Description                                     |
+|--------|-------------------------------------------------|
 | `:set` | Set the governor for the target CPUs (default). |
 
 ## Properties
 
-| Property | Type | Default | Description |
-|---|---|---|---|
-| `governor` | String | name property | Governor name to apply. |
-| `cpus` | Array, Integer | all detected CPUs | CPU indexes to manage. |
-| `package_name` | String | `'cpufrequtils'` | Package that provides the governor tooling. |
+| Property       | Type           | Default           | Description                                 |
+|----------------|----------------|-------------------|---------------------------------------------|
+| `governor`     | String         | name property     | Governor name to apply.                     |
+| `cpus`         | Array, Integer | all detected CPUs | CPU indexes to manage.                      |
+| `package_name` | String         | `'cpufrequtils'`  | Package that provides the governor tooling. |
 
 ## Examples
 

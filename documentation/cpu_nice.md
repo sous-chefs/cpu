@@ -4,16 +4,16 @@ Manage process priority with `renice`.
 
 ## Actions
 
-| Action | Description |
-|---|---|
+| Action | Description                         |
+|--------|-------------------------------------|
 | `:set` | Set the process priority (default). |
 
 ## Properties
 
-| Property | Type | Default | Description |
-|---|---|---|---|
-| `pid` | String, Integer | name property | PID or PID file to target. |
-| `priority` | Integer | none | Nice value to assign. |
+| Property   | Type            | Default       | Description                |
+|------------|-----------------|---------------|----------------------------|
+| `pid`      | String, Integer | name property | PID or PID file to target. |
+| `priority` | Integer         | none          | Nice value to assign.      |
 
 ## Examples
 
