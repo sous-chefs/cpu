@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module CpuCookbook
   module Helpers
     def findpid(pid_or_file)
