@@ -12,9 +12,8 @@ Manage CPU Governor on linux
 
 ### Platforms
 
-- Ubuntu
-- Debian
-- Centos
+- Debian 12+
+- Ubuntu 22.04+
 
 ### Chef
 
@@ -24,19 +23,14 @@ Manage CPU Governor on linux
 
 No dependencies defined
 
-## Attributes
+## Usage
 
-- `node['cpu']['governor']` - Defaults to `"ondemand"`.
-
-## Recipes
-
-- `cpu::affinity` - deprecated
-- `cpu::default` - deprecated
-- `cpu::governor` - Sets the CPU governer based on the attribute above
+This cookbook is resource-based. Configure CPU behavior through resource properties rather than cookbook attributes or recipes.
 
 ## Resources
 
 - [cpu_affinity](#cpu_affinity)
+- [cpu_governor](#cpu_governor)
 - [cpu_nice](#cpu_nice)
 
 ### cpu_affinity
@@ -64,6 +58,32 @@ Set affinity to processor 0,1,2 for process nginx
 cpu_affinity 'set affinity for nginx' do
   pid '/var/run/nginx.pid'
   cpu '0-2'
+end
+```
+
+### cpu_governor
+
+#### Actions
+
+- set: Default action.
+
+#### Properties
+
+- governor:
+- cpus: Defaults to all detected CPUs.
+- package_name: Defaults to `"cpufrequtils"`.
+
+#### Examples
+
+```ruby
+cpu_governor 'ondemand'
+```
+
+Set the governor for a subset of CPUs
+
+```ruby
+cpu_governor 'performance' do
+  cpus [0, 1]
 end
 ```
 
