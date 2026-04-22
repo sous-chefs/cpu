@@ -12,9 +12,8 @@ Manage CPU Governor on linux
 
 ### Platforms
 
-- Ubuntu
-- Debian
-- Centos
+- Debian 11+
+- Ubuntu 22.04+
 
 ### Chef
 
