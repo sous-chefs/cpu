@@ -4,7 +4,6 @@
 
 ### APT (Debian/Ubuntu)
 
-- Debian 11 (Bullseye): `cpufrequtils` is available in the Debian package archive.
 - Debian 12 (Bookworm): `cpufrequtils` is available in the Debian package archive.
 - Ubuntu 22.04 (Jammy): `cpufrequtils` is available in Ubuntu Universe.
 - Ubuntu 24.04 (Noble): `cpufrequtils` is available in Ubuntu Universe.
@@ -16,7 +15,7 @@
 
 ## Architecture Limitations
 
-- Debian package metadata lists `cpufrequtils` for Bullseye and Bookworm on multiple architectures, including `amd64` and `arm64`.
+- Debian package metadata lists `cpufrequtils` for Bookworm on multiple architectures, including `amd64` and `arm64`.
 - Ubuntu package metadata lists `cpufrequtils` for Jammy and Noble on `amd64`, `arm64`, `armhf`, and `s390x`.
 
 ## Source/Compiled Installation

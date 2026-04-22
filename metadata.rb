@@ -8,5 +8,5 @@ issues_url        'https://github.com/sous-chefs/cpu/issues'
 chef_version      '>= 15.3'
 version           '3.0.14'
 
-supports 'debian', '>= 11.0'
+supports 'debian', '>= 12.0'
 supports 'ubuntu', '>= 22.04'

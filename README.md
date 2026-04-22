@@ -12,7 +12,7 @@ Manage CPU Governor on linux
 
 ### Platforms
 
-- Debian 11+
+- Debian 12+
 - Ubuntu 22.04+
 
 ### Chef
