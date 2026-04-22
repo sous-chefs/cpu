@@ -2,6 +2,22 @@
 
 This file is used to list changes made in each version of the cpu cookbook.
 
+## [4.0.0](https://github.com/sous-chefs/cpu/compare/v3.0.14...v4.0.0) (2026-04-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* removes recipe-driven governor configuration and the attributes/recipes compatibility path. Consumers must use custom resources instead of cpu::governor and node attributes. Supported platforms are now Debian 12+ and Ubuntu 22.04+ only. ---------
+
+### Features
+
+* migrate cpu governor resource ([#62](https://github.com/sous-chefs/cpu/issues/62)) ([6b5c58f](https://github.com/sous-chefs/cpu/commit/6b5c58f10e879ab6ec3ef8529348da8f00c108fd))
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#55](https://github.com/sous-chefs/cpu/issues/55)) ([ce03b52](https://github.com/sous-chefs/cpu/commit/ce03b52dfbf71ece57157705475aea83baedb8c7))
+
 ## [3.0.14](https://github.com/sous-chefs/cpu/compare/3.0.13...v3.0.14) (2025-10-15)
 
 ### Bug Fixes
