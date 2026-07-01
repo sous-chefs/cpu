@@ -83,12 +83,9 @@ test/*
 */.hg/*
 */.svn/*
 
-# Berkshelf #
-#############
-Berksfile
-Berksfile.lock
 cookbooks/*
 tmp
+Policyfile.lock.json
 
 # Bundler #
 ###########
